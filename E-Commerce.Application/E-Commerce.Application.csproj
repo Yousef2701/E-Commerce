@@ -12,7 +12,6 @@
     <Folder Include="CQRS-Features\Commands\" />
     <Folder Include="CQRS-Features\" />
     <Folder Include="CQRS-Features\Queries\" />
-    <Folder Include="Services\" />
     <Folder Include="Validator\" />
   </ItemGroup>
 
