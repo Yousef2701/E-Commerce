@@ -1,3 +1,4 @@
+using E_Commerce.Application.Enums;
 using E_Commerce.Application.Helpers;
 using E_Commerce.Persistence.Data;
 using Microsoft.AspNetCore.Identity;
@@ -38,19 +39,19 @@ builder.Services.Configure<IdentityOptions>(o => {
 #region Authorization Roles Config
 
 builder.Services.AddAuthorization(options =>
-    options.AddPolicy("AdminRole", op => op.RequireClaim("Admin", "Admin"))
+    options.AddPolicy("AdminRole", op => op.RequireClaim(UsersRoles.Admin.ToString(), UsersRoles.Admin.ToString()))
     );
 
 builder.Services.AddAuthorization(options =>
-    options.AddPolicy("CustomerRole", op => op.RequireClaim("Customer", "Customer"))
+    options.AddPolicy("CustomerRole", op => op.RequireClaim(UsersRoles.Customer.ToString(), UsersRoles.Customer.ToString()))
     );
 
 builder.Services.AddAuthorization(options =>
-    options.AddPolicy("TraderRole", op => op.RequireClaim("Trader", "Trader"))
+    options.AddPolicy("TraderRole", op => op.RequireClaim(UsersRoles.Trader.ToString(), UsersRoles.Trader.ToString()))
     );
 
 builder.Services.AddAuthorization(options =>
-    options.AddPolicy("ShippingManRole", op => op.RequireClaim("ShippingMan", "ShippingMan"))
+    options.AddPolicy("ShippingManRole", op => op.RequireClaim(UsersRoles.ShippingMan.ToString(), UsersRoles.ShippingMan.ToString()))
     );
 
 #endregion
