@@ -1,6 +1,7 @@
 using System.Text;
 using E_Commerce.Application.Enums;
 using E_Commerce.Application.Helpers;
+using E_Commerce.Domain.IRepository;
 using E_Commerce.Persistence.Data;
 using E_Commerce.Persistence.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

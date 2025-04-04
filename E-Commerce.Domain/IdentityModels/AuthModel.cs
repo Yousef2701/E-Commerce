@@ -1,4 +1,4 @@
-﻿namespace E_Commerce.Domain
+﻿namespace E_Commerce.Domain.IdentityModels
 {
     public class AuthModel
     {
